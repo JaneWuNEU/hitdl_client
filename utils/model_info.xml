@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+        <inception>
+                <model_layer_name>'input','Conv2d_1a_3x3','Conv2d_2a_3x3' ,'Conv2d_2b_3x3' ,'MaxPool_3a_3x3' ,'Conv2d_3b_1x1' ,'Conv2d_4a_3x3'
+                        ,'MaxPool_5a_3x3' ,'Mixed_5b' ,'Mixed_5c' ,'Mixed_5d' ,'Mixed_6a','Mixed_6b' ,'Mixed_6c' ,'Mixed_6d'
+                        ,'Mixed_6e' ,'Mixed_7a' ,'Mixed_7b' ,'Mixed_7c','Predictions'
+                </model_layer_name>
+                <model_layer_shape>
+                        (149, 149, 32) ,(147, 147, 32) ,(147, 147, 64) ,(73, 73, 64) ,(73, 73, 80)
+                        ,(71, 71, 192) ,(35, 35, 192) ,(35, 35, 256) ,(35, 35, 288) ,(35, 35, 288)
+                        ,(17, 17, 768) ,(17, 17, 768) ,(17, 17, 768) ,(17, 17, 768) ,(17, 17, 768)
+                        ,(8, 8, 1280) ,(8, 8, 2048) ,(8, 8, 2048),(1001,1)
+                </model_layer_shape>
+       </inception>
+        <resnet>
+                <model_layer_name>"input","conv1", "pool1", 'block1/unit_1', 'block1/unit_2', 'block1/unit_3',
+                 'block2/unit_1', 'block2/unit_2', 'block2/unit_3', 'block2/unit_4',
+                 'block3/unit_1', 'block3/unit_2', 'block3/unit_3', 'block3/unit_4',
+                 'block3/unit_5', 'block3/unit_6', 'block4/unit_1', 'block4/unit_2',
+                 'block4/unit_3', "global_pool",'predictions'
+                </model_layer_name>
+                <model_layer_shape>
+                        (224,224,3),(122, 122, 64), (61, 61, 64), (61, 61, 256), (61, 61, 256), (31, 31, 256), (31, 31, 512),
+                        (31, 31, 512),(31, 31, 512),(16, 16, 512), (16, 16, 1024),(16, 16, 1024), (16, 16, 1024),
+                        (16, 16, 1024),(16, 16, 1024),(8, 8, 1024),  (8, 8, 2048),(8, 8, 2048),(8, 8, 2048), (1, 1, 2048), (1001,1)
+                </model_layer_shape>
+       </resnet>
+        <mobilenet>
+                <model_layer_name>'input','Conv2d_0', 'Conv2d_1_pointwise', 'Conv2d_2_pointwise',
+                'Conv2d_3_pointwise', 'Conv2d_4_pointwise', 'Conv2d_5_pointwise',
+                'Conv2d_6_pointwise', 'Conv2d_7_pointwise', 'Conv2d_8_pointwise',
+                'Conv2d_9_pointwise', 'Conv2d_10_pointwise', 'Conv2d_11_pointwise',
+                'Conv2d_12_pointwise', 'Conv2d_13_pointwise','Predictions'
+                </model_layer_name>
+                <model_layer_shape>
+                     (224,224,3),(112, 112, 32),(112, 112, 64), (56, 56, 128),  (56, 56, 128), (28, 28, 256),(28, 28, 256),
+                    (14, 14, 512),  (14, 14, 512), (14, 14, 512),(14, 14, 512), (14, 14, 512),(14, 14, 512),
+                     (7, 7, 1024), (7, 7, 1024),(1001,1)
+                </model_layer_shape>
+        </mobilenet>
+</model>
